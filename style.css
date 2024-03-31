@@ -30,22 +30,88 @@ p {
   text-align: center;
 }
 
-ul {
+.headerul {
   background-color: #03cafc; /* リストの背景色 */
+  padding: 10px; /* リストの内側の余白を消す */
   display: flex;
   justify-content: center;
   list-style-type: none; /* リストの点を消す */
   
 }
 
-ul li {
+.headerul li {
   margin: 0 30px; /* 要素間の間隔を設定 */
   
 }
 
-ul li a {
+.headerulul li a {
   display: inline-block; /* ボタンのサイズを一定にする */
   padding: 10px 20px; /* ボタンの上下左右にパディングを設定 */
   border-radius: 0; /* ボタンの角をなくす */
   color: #ffffff; /* テキストの色 */
+}
+
+.frex {
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+}
+
+.frex .img {
+  border-radius: 50%; /* 画像を丸く切り取る */
+  margin-right: 20px; /* 画像とテキストの間に間隔を設定 */
+  width: 20%; /* 画像の幅を半分に設定 */
+  position: relative;
+}
+
+.frex .text {
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+code { 
+  background-color: #222222;
+  color: #fff; /* テキスト色を白に設定 */
+  padding: 2px 4px; /* パディング */
+  border-radius: 3px; /* ボーダーラディウス */
+  font-family: 'Courier New', monospace; /* フォント */
+}
+
+.accordion {
+  width: 500px;
+  max-width: 100%;
+}
+
+/* チェックボックスを非表示にする */
+.accordion-hidden{
+  display: none;
+}
+
+/* Question部分 */
+.accordion-open {
+  display: block;
+  /* padding: 10px; */
+  /* background: #52a261; */
+  cursor: pointer;
+  margin: 5px 0;
+  /* font-weight: 700; */
+}
+
+/* Answer部分は最初は表示しない */
+.accordion-close {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  opacity: 0;
+  transition: 0.5s;/* 表示速度の設定 */
+}
+
+/* チェックボックスにチェックが入ったらAnswer部分を表示 */
+.accordion-hidden:checked + .accordion-open + .accordion-close {
+  height: auto;
+  opacity: 1;
+  padding: 10px;
+  background: #222222;
+  /* font-weight: 700; */
 }

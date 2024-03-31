@@ -8,7 +8,7 @@
         <header>
             <h1 style="text-align: center;">忘れ物置き場</h1>
             <nav>
-                <ul>
+                <ul class="headerul">
                     <li><a href="index.html">ホーム</a></li>
                     <li><a href="diary.html">日記</a></li>
                     <li><a href="contact.html">お問い合わせ</a></li>
@@ -23,12 +23,52 @@
         <div class ="content" >
             <h2>自己紹介</h2>
         </div>
-        <p id="currentTime"></p>
-        <a href="diary.html"><button>日記ページへ</button></a>
-        <!-- <img src="handsup.jpg" alt="Hands Up"> -->
-        <!-- <script type="text/javascript">
-            document.getElementById('currentTime').innerHTML = new Date().toLocaleTimeString();
-            alert('Hello World');
-        </script> -->
+        <!-- 写真と自己紹介の文面でに段組みにする -->
+        <div class="frex">
+            <img class="img" src="ryoma.JPG" alt="icon">
+            <p class="text">はじめまして！りょうまです。プログラミングを勉強している大学生です！<br>ここは忘れ物置き場としていろんなtipsをまとめようと思います</p>
+        </div>
+        
+        <div class="content">
+            <h2>研究のtips</h2>
+        </div>
+
+        <div class="content">
+            <h2>環境構築のtips</h2>
+        </div>
+
+            <h3> エディタのインストール場所</h3>
+                <ul>
+                    <li><a href="https://code.visualstudio.com/">VScode</a></li>
+                </ul>
+
+            <h3> LaTeXのインストール関係</h3>
+                <ul>
+                    <li><a href="https://www.tug.org/texlive/acquire-netinstall.html">texlive</a></li>
+                    <li><a href="https://qiita.com/passive-radio/items/623c9a35e86b6666b89e">参考になるかもねのサイト</a></li>
+                    <li>
+                        <div class="accordion">
+                            <input type="checkbox" id="check1" class="accordion-hidden">
+                            <label for="check1" class="accordion-open">.latexmkrcの設定（押したら開くよ）</label>
+                            <label for="check1" class="accordion-close"> 
+                                <code>
+                                    $latex = 'platex -synctex=1 -halt-on-error %O %S';<br>
+                                    $bibtex = 'pbibtex %O %B';<br>
+                                    $dvipdf = 'dvipdfmx %O -o %D %S';<br>
+                                    $pdf_mode = 3;<br>
+                                    $pdf_previewer = 'open -a Preview';<br>
+                                    $clean_ext = 'bbl rel %R-blx.bib %R.bbl %R.synctex.gz %R.run.xml %R-blx.bib %R-blx.bbl %R-blx.blg %R-blx.aux %R.aux %R.log %R.dvi %R.out %R.toc %R.lof %R.lot %R.idx %R.ind %R.ilg %R.glo %R.gls %R.glg %R.fls
+                                </code>
+                            </label>
+                        </div>
+                    </li>
+                    
+                    
+                </ul>
+                <h4> パッケージ関係</h4>
+        <div class="content">
+            <h2>プログラミングのtips</h2>
+        </div>
+
     </body>
 </html>
