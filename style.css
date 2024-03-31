@@ -1,20 +1,24 @@
 body {
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
   font-family: Arial, sans-serif;
+  padding-left: 10%;
+  padding-right: 10%;
 }
+
+header {
+  padding: 0;
+}
+
 h1 {
   color: #333;
   text-align: center;
 }
 
-h2::before {
-  content: "";
-  display: inline-block;
-  width: 5px;
-  height: 100%;
-  background-color: blue;
-  margin-right: 10px;
-}
+.content h2 {
+  border-left:dashed 5px #1e50a2;
+  padding:0.3rem 1rem;
+  background:#eaf4fc;
+  }
 
 p {
   font-size: 18px;
@@ -24,4 +28,24 @@ p {
   font-size: 20px;
   color: #ff6347;
   text-align: center;
+}
+
+ul {
+  background-color: #03cafc; /* リストの背景色 */
+  display: flex;
+  justify-content: center;
+  list-style-type: none; /* リストの点を消す */
+  
+}
+
+ul li {
+  margin: 0 30px; /* 要素間の間隔を設定 */
+  
+}
+
+ul li a {
+  display: inline-block; /* ボタンのサイズを一定にする */
+  padding: 10px 20px; /* ボタンの上下左右にパディングを設定 */
+  border-radius: 0; /* ボタンの角をなくす */
+  color: #ffffff; /* テキストの色 */
 }
