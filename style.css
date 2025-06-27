@@ -31,24 +31,44 @@ p {
 }
 
 .headerul {
-  background-color: #03cafc; /* リストの背景色 */
-  padding: 10px; /* リストの内側の余白を消す */
-  display: flex;
-  justify-content: center;
-  list-style-type: none; /* リストの点を消す */
-  
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .headerul li {
-  margin: 0 30px; /* 要素間の間隔を設定 */
-  
+    margin: 0;
+    padding: 0;
 }
 
-.headerulul li a {
-  display: inline-block; /* ボタンのサイズを一定にする */
-  padding: 10px 20px; /* ボタンの上下左右にパディングを設定 */
-  border-radius: 0; /* ボタンの角をなくす */
-  color: #ffffff; /* テキストの色 */
+.headerul li a {
+    display: inline-block;
+    min-width: 120px; /* ボタンの幅を統一 */
+    text-align: center;
+    padding: 10px 0;
+    border: 2px solid #0074d9;
+    border-radius: 0;
+    background: #fff;
+    color: #0074d9;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+    box-sizing: border-box;
+}
+
+.headerul li a.active {
+    background: #0074d9;
+    color: #fff;
+}
+
+.headerul li a:not(.active):hover {
+    background: #e6f0fa;
+}
+
+.headerul li + li a {
+    border-left: none; /* ボタン同士の枠線が重ならないように */
 }
 
 .frex {
