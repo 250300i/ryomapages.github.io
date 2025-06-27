@@ -144,9 +144,38 @@ code {
   /* font-weight: 700; */
 }
 
-.footer {
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px; /* 隙間を広げる */
+    margin: 32px 0;
+}
+
+.blog-card.blog-link {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    padding: 20px 28px;
+    display: block;
+    text-decoration: none;
+    transition: box-shadow 0.2s, background 0.2s;
+    color: inherit;
+    cursor: pointer;
+}
+
+.blog-card.blog-link:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.22);
     background: #e6f0fa;
-    padding: 24px 0 12px 0;
-    text-align: center;
-    margin-top: 40px;
+}
+
+.blog-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #0074d9;
+}
+
+.blog-comment {
+    color: #333;
+    font-size: 0.98em;
 }

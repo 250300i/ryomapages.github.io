@@ -3,6 +3,7 @@
     <head>
         <title>Kataoka Ryoma</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="src/common/footer.css">
     </head>
     <body>
         <header>
@@ -10,15 +11,16 @@
             <nav>
                 <ul class="headerul">
                     <li><a href="index.html" class="active">ホーム</a></li>
-                    <li><a href="diary.html">日記</a></li>
-                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li><a href="research/research.html">研究</a></li>
+                    <li><a href="hobby.html">趣味（未実装）</a></li>
+                    <li><a href="tips/tips.html">Tips</a></li>
                 </ul>
             </nav>
 
         </header>
 
 
-        <p>Welcome to Website!</p>
+        <!-- <p>Welcome to Website!</p> -->
 
         <div class ="content" >
             <h2>自己紹介</h2>
@@ -26,81 +28,44 @@
         <!-- 写真と自己紹介の文面でに段組みにする -->
         <div class="frex">
             <img class="img" src="ryoma.JPG" alt="icon">
-            <p class="text">はじめまして！りょうまです。プログラミングを勉強している大学生です！<br>ここは忘れ物置き場としていろんなtipsをまとめようと思います</p>
+            <p class="text">はじめまして！りょうまです。</p>
+            <p class="text">高知工科大学M1，情報学コース所属です。</p>
+            <p class="text">画像情報工学研究室所属です。</p>
         </div>
         
         <div class="content">
-            <h2>研究のtips</h2>
+            <h2>経歴</h2>
+            <ul>
+                <li>2018年4月　京都府立工業高等学校　情報テクノロジー科入学</li>
+                <li>2021年3月　京都府立工業高等学校　情報テクノロジー科卒業</li>
+                <li>2021年4月　高知工科大学　情報学群入学</li>
+                <li>2025年3月　高知工科大学　情報学群卒業</li>
+                <li>2025年4月　高知工科大学大学院　情報学コース入学</li>
         </div>
 
         <div class="content">
-            <h2>環境構築のtips</h2>
+            <h2>連絡先</h2>
+            以下のメールアドレスにご連絡ください（atを@に変えてください）
+            <p>メール: 295130 at gs.kochi-tech.ac.jp</p>
         </div>
 
-            <h3> エディタのインストール場所</h3>
-                <ul>
-                    <li><a href="https://code.visualstudio.com/">VScode</a></li>
+        <footer class="footer">
+            <div class="md-flex md-justify-between">
+                <a href="https://github.com/250300i" class="footer__logo" target="_blank">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="32" height="32" alt="GitHub Logo" />
+                </a>
+                <ul class="footer__navi flex">
+                <!-- <li><a href="https://github.com/250300i" target="_blank">GitHub</a></li> -->
+                <li><a href="https://twitter.com/ABCDefghKRYO" target="_blank">X（旧Twitter）</a></li>
+                <li><a href="https://krlab.kochi-tech.ac.jp/" target="_blank">研究室ページ</a></li>
+                <li><a href="https://www.kochi-tech.ac.jp/" target="_blank">高知工科大学</a></li>
                 </ul>
-
-            <h3> LaTeXのインストール関係</h3>
-                <ul>
-                    <li><a href="https://www.tug.org/texlive/acquire-netinstall.html">texlive</a></li>
-                    <li><a href="https://qiita.com/passive-radio/items/623c9a35e86b6666b89e">参考になるかもねのサイト</a></li>
-                    <li><a href="https://qiita.com/rainbartown/items/d7718f12d71e688f3573">vscodeとlatexの設定</a></li>
-                    <li>
-                        <div class="accordion">
-                            <input type="checkbox" id="check1" class="accordion-hidden">
-                            <label for="check1" class="accordion-open">.latexmkrcの設定（押したら開くよ）</label>
-                            <label for="check1" class="accordion-close"> 
-                                <code>
-                                    # #!/usr/bin/env perl
-                                    # # LaTeX
-                                    # $latex = 'platex -synctex=1 -halt-on-error -file-line-error %O %S';
-                                    # $max_repeat = 5;
-                                    # # BibTeX
-                                    # $bibtex = 'pbibtex %O %S';
-                                    # $biber = 'biber --bblencoding=utf8 -u -U --output_safechars %O %S';
-                                    # # index
-                                    # $makeindex = 'mendex %O -o %D %S';
-                                    # # DVI / PDF
-                                    # $dvipdf = 'dvipdfmx %O -o %D %S';
-                                    # $pdf_mode = 3;
-                                    # # preview
-                                    # $pvc_view_file_via_temporary = 0;
-                                    # if ($^O eq 'linux') {
-                                    #     $dvi_previewer = "xdg-open %S";
-                                    #     $pdf_previewer = "xdg-open %S";
-                                    # } elsif ($^O eq 'darwin') {
-                                    #     $dvi_previewer = "open %S";
-                                    #     $pdf_previewer = "open %S";
-                                    # } else {
-                                    #     $dvi_previewer = "start %S";
-                                    #     $pdf_previewer = "start %S";
-                                    # }
-                                    # # clean up
-                                    # $clean_full_ext = "%R.synctex.gz"
-                                    # LaTeX
-                                    $latex = 'uplatex -synctex=1 -halt-on-error -file-line-error %O %S';
-                                    $max_repeat = 5;
-                                    # BibTeX
-                                    $bibtex = 'upbibtex %O %S';
-                                    $biber = 'biber --bblencoding=utf8 -u -U --output_safechars %O %S';
-                                    # index
-                                    $makeindex = 'upmendex %O -o %D %S';
-                                    # DVI / PDF
-                                    $dvipdf = 'dvipdfmx %O -o %D %S';
-                                    $pdf_mode = 3;
-                                </code>
-                            </label>
-                        </div>
-                    </li>
-                    
-                    
-                </ul>
-                <h4> パッケージ関係</h4>
-        <div class="content">
-            <h2>プログラミングのtips</h2>
-        </div>
+            </div>
+            <hr />
+            <p class="copyright">
+                &copy; 2025 Kataoka Ryoma
+            </p>
+        </footer>
 
     </body>
 </html>
